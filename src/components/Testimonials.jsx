@@ -22,30 +22,30 @@ const Testimonials = () => {
       image: "/images/donald.jpg",
     },
     {
-      name: "Amit Kumar",
+      name: "Christian Bale",
       rating: 5,
       comment:
         "Best place for mobile accessories. Bought a power bank and tempered glass, both are excellent quality.",
-      image: "/images/customers/amit.jpg",
+      image: "/images/chris-bale.jpg",
     },
     {
-      name: "Sneha Reddy",
+      name: "Daniel Radcliffe",
       rating: 5,
       comment:
         "Fast and reliable service. Battery replacement was done quickly and my phone works like new. Great experience!",
-      image: "/images/customers/sneha.jpg",
+      image: "/images/daniel.jpg",
     },
   ];
 
   return (
-    <section className="py-16 md:py-24 bg-gray-50 relative">
+    <section className="py-16 md:py-24 bg-dark relative">
       <div className="max-w-7xl mx-auto px-4  sm:px-6 lg:px-8">
         {/* Section Heading */}
-        <div className="text-center mb-12 animate-fadeIn">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            What Our Customers Say
+        <div className="text-start sm:text-center mb-12 animate-fadeIn">
+          <h2 className="text-2xl pl-2  border-l-4 sm:border-none border-primary  md:text-4xl font-bold text-slate-200 mb-4">
+            What Our Customer Says!
           </h2>
-          <p className="text-lg text-gray-600">
+          <p className="text-lg text-white">
             Don’t just take our word for it – hear from our satisfied customers
           </p>
         </div>
@@ -57,8 +57,9 @@ const Testimonials = () => {
   spaceBetween={30}
   slidesPerView={1}
   pagination={{ clickable: true }}
-  loop={true} // ✅ enables infinite scrolling
+ // ✅ enables infinite scrolling
   autoplay={{ delay: 4000, disableOnInteraction: false }}
+  loop={testimonials.length > 3}
   onInit={(swiper) => {
     // ✅ reattach navigation buttons manually for loop mode
     const nextBtn = document.querySelector(".swiper-button-next-custom");
@@ -80,7 +81,8 @@ const Testimonials = () => {
 
             {testimonials.map((testimonial, index) => (
               <SwiperSlide key={index}>
-                <div className="bg-white rounded-xl p-6 mb-3 shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                <div className=" bg-white/10 backdrop-blur-md 
+             border border-white/20  rounded-xl p-6 mb-3 shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
 
                   {/* Profile Image */}
                   <div className="flex flex-col items-center mb-4">
@@ -93,7 +95,7 @@ const Testimonials = () => {
                   </div>
                   {/* Name */}
                   <div className="border-t pt-4 text-center">
-                    <p className="font-semibold text-gray-900">
+                    <p className="font-semibold text-slate-200">
                       {testimonial.name}
                     </p>
                     
@@ -108,7 +110,7 @@ const Testimonials = () => {
                         />
                       ))}
                     </div>
-                  <p className="text-gray-600 mb-4 italic text-center">
+                  <p className="text-white mb-4 italic text-center">
                     "{testimonial.comment}"
                   </p>
                   </div>

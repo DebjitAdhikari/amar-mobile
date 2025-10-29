@@ -11,13 +11,16 @@ const Brands = () => {
   ];
 
   return (
-    <section className="py-16 md:py-24 bg-gray-50">
+    <section className="relative py-16 md:py-24 bg-dark">
+      {/* <div className="absolute sm:w-72 sm:h-72 animate-drift  opacity-45 top-1 right-2 sm:bottom-9 sm:top-2 sm:left-4">
+        <img src="./images/brand-bg.png" alt="" />
+      </div> */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12 animate-fadeIn">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        <div className="text-start sm:text-center mb-12 animate-fadeIn">
+          <h2 className="text-2xl pl-2 sm:pl-0 border-l-4 border-primary sm:border-none md:text-4xl font-bold text-white mb-4">
             Brands We Repair & Support
           </h2>
-          <p className="text-lg text-gray-600">
+          <p className="text-lg text-slate-200">
             We service all major smartphone brands with expertise and care
           </p>
         </div>
@@ -26,13 +29,14 @@ const Brands = () => {
           {brands.map((brand, index) => (
             <div
               key={index}
-              className="bg-white cursor-pointer rounded-xl p-6 flex flex-col items-center justify-evenly hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-200 hover:border-blue-500"
+              className=" bg-white/10 backdrop-blur-md 
+             border border-white/20 cursor-pointer rounded-xl p-6 flex flex-col items-center justify-evenly hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2  border-gray-200 hover:border-primary"
             >
               <div className="text-4xl mb-2">
                 {/* {brand.logo} */}
                 <img src={brand.imageSrc} alt="" />
               </div>
-              <span className="text-sm font-semibold text-gray-700">
+              <span className="text-sm font-semibold text-white">
                 {brand.name}
               </span>
             </div>

@@ -1,4 +1,5 @@
-import { Smartphone, Battery, Droplet, Plug, Camera, Settings, Database } from 'lucide-react';
+import { Smartphone, Battery, Droplet, Plug, Camera } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 const Services = () => {
   const services = [
@@ -27,52 +28,62 @@ const Services = () => {
       title: 'Camera Repair',
       description: 'Restore camera functionality with precision repairs and replacements.',
     },
-    {
-      icon: <Settings className="w-8 h-8" />,
-      title: 'Software/OS Problems',
-      description: 'Software updates, virus removal, and operating system troubleshooting.',
-    },
-    {
-      icon: <Database className="w-8 h-8" />,
-      title: 'Data Recovery',
-      description: 'Recover your important data from damaged or non-functional devices.',
-    },
   ];
 
   return (
-    <section id="services" className="py-16 md:py-24 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12 animate-fadeIn">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+    <section id="services" className="relative py-16 md:py-24 bg-dark overflow-hidden">
+      {/* Background images */}
+      <div className="absolute w-28 h-28 sm:w-72 sm:h-72 opacity-45 top-1 right-2 sm:bottom-9 sm:top-2 sm:left-4">
+        <img src="./images/screw-driver.png" alt="" />
+      </div>
+      <div className="absolute w-24 h-24 sm:w-60 sm:h-60 opacity-60 bottom-2 sm:bottom-9 right-2 animate-spin">
+        <img src="./images/single-setting-bg.png" alt="" />
+      </div>
+
+      {/* Section heading */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="sm:text-center text-start mb-12 animate-fadeIn">
+          <h2 className="text-2xl pl-2 sm:pl-0 border-l-4 border-primary sm:border-none md:text-4xl font-bold text-white mb-4">
             Our Repair Services
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="sm:text-lg text-sm text-white max-w-2xl mx-auto">
             Professional repair services for all mobile brands and models with warranty-backed quality.
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        {/* Service cards */}
+        <div className="grid sm:grid-cols-2 max-w-[80vw] m-auto lg:grid-cols-3 gap-6 justify-center">
           {services.map((service, index) => (
-            <div
-                key={index}
-                className="hover:cursor-pointer group relative bg-gradient-to-b from-white to-gray-50 border border-gray-200 rounded-2xl p-6 sm:p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 hover:border-blue-500"
-                >
-  {/* Decorative glow on hover */}
-  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-r from-blue-100/40 to-purple-100/40 rounded-2xl blur-xl -z-10" />
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.15 }}
+              viewport={{ once: true, amount: 0.2 }}
+              className="hover:cursor-pointer group relative rounded-2xl p-6 sm:p-8 
+                         bg-gradient-to-b from-white/10 to-white/5 
+                         backdrop-blur-md border border-white/20 
+                         hover:shadow-2xl transition-all duration-500 
+                         transform hover:-translate-y-3 hover:border-primary"
+            >
+              {/* Hover glow */}
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-r from-cyan-400/0 to-purple-200/20 rounded-2xl blur-xl -z-10" />
 
-  <div className="bg-blue-100 text-blue-600 w-16 h-16 rounded-xl flex items-center justify-center mb-5 mx-auto group-hover:bg-blue-600 group-hover:text-white transition-all duration-500 shadow-md">
-    {service.icon}
-  </div>
+              {/* Icon */}
+              <div className="bg-primary border-2 border-primary text-midDark w-16 h-16 rounded-xl flex items-center justify-center mb-5 mx-auto group-hover:bg-white group-hover:text-primary transition-all duration-500 shadow-md">
+                {service.icon}
+              </div>
 
-  <h3 className="text-xl sm:text-2xl font-semibold text-gray-900 mb-3 text-center group-hover:text-blue-600 transition-colors duration-300">
-    {service.title}
-  </h3>
+              {/* Title */}
+              <h3 className="text-lg font-semibold sm:text-2xl text-slate-50 mb-3 text-center group-hover:text-primary transition-colors duration-300">
+                {service.title}
+              </h3>
 
-  <p className="text-gray-600 text-sm sm:text-base text-center leading-relaxed">
-    {service.description}
-  </p>
-</div>
-
+              {/* Description */}
+              <p className="text-white text-sm sm:text-base text-center leading-relaxed">
+                {service.description}
+              </p>
+            </motion.div>
           ))}
         </div>
       </div>
