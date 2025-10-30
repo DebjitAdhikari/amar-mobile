@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 
-const Navbar = () => {
+const Navbar = ({lang}) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -12,11 +12,11 @@ const Navbar = () => {
   }, []);
 
   const navLinks = [
-    { name: 'Home', href: '#home' },
-    { name: 'Services', href: '#services' },
-    { name: 'Accessories', href: '#accessories' },
-    { name: 'About', href: '#about' },
-    { name: 'Contact', href: '#contact' },
+    { name: lang=="bn"?"হোম":'Home', href: '#home' },
+    { name: lang?"সার্ভিস":'Services', href: '#services' },
+    { name: lang?"অ্যাক্সেসরিজ":'Accessories', href: '#accessories' },
+    { name: lang?"সম্বন্ধে":'About', href: '#about' },
+    { name: lang?"যোগাযোগ":'Contact', href: '#contact' },
   ];
 
   const scrollToSection = (href) => {
@@ -44,11 +44,12 @@ const Navbar = () => {
               className="w-12 h-16 object-contain"
               alt="Logo"
             />
-            <span className="text-2xl md:text-3xl font-bold text-primary tracking-tight">
-              Amar<span className="text-white">Mobile</span>
+            <span className="text-2xl md:text-3xl text-white font-bold tracking-tight">
+              Amar<span className=" text-primary">Mobile</span>
             </span>
           </div>
 
+          
           {/* Desktop Links */}
           <div className="hidden md:flex items-center space-x-6">
             {navLinks.map((link) => (

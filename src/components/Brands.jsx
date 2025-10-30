@@ -1,13 +1,13 @@
 const Brands = () => {
   const brands = [
-    { name: 'Apple', logo: '🍎',imageSrc:"./images/apple.png" },
-    { name: 'Samsung', logo: '📱',imageSrc:"./images/samsung.png" },
-    { name: 'OnePlus', logo: '1️⃣',imageSrc:"./images/oneplus.png" },
+    { name: 'Apple', logo: '🍎',imageSrc:"./images/apple-logo.png" },
+    { name: 'Samsung', logo: '📱',imageSrc:"./images/samsung-logo.avif" },
+    { name: 'OnePlus', logo: '1️⃣',imageSrc:"./images/oneplus-logo.png" },
     { name: 'Xiaomi', logo: '📲',imageSrc:"./images/xiaomi.png" },
     { name: 'Vivo', logo: '📞',imageSrc:"./images/vivo.png" },
-    { name: 'Oppo', logo: '☎️',imageSrc:"./images/oppo.png" },
+    { name: 'Oppo', logo: '☎️',imageSrc:"./images/oppo-logo.png" },
     { name: 'Realme', logo: '📳',imageSrc:"./images/realme.png" },
-    { name: 'Others', logo: '📱',imageSrc:"./images/appile.png" },
+    { name: 'Nothing', logo: '📱',imageSrc:"./images/nothing-logo.png" },
   ];
 
   return (
@@ -30,9 +30,10 @@ const Brands = () => {
             <div
               key={index}
               className=" bg-white/10 backdrop-blur-md 
-             border border-white/20 cursor-pointer rounded-xl p-6 flex flex-col items-center justify-evenly hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2  border-gray-200 hover:border-primary"
+             border border-white/20 
+             cursor-pointer rounded-xl p-6 flex flex-col items-center justify-evenly hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2  border-gray-200 hover:border-primary"
             >
-              <div className="text-4xl mb-2">
+              <div className="text-4xl  mb-2">
                 {/* {brand.logo} */}
                 <img src={brand.imageSrc} alt="" />
               </div>

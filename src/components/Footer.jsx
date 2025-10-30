@@ -23,16 +23,19 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-gray-900 text-white py-12">
+    <footer className="relative  bg-midDark text-white py-12">
+      {/* <div className='absolute top-0 z-20 w-[90vw]'>
+        <img src="./images/footer-bg.png" className="w-full"alt="" />
+      </div> */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           <div className="md:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
               <div className="w-16 h-16 p-2 rounded-lg">
-                <img src="/images/logo.png" alt="" />
+                <img src="/images/amar-logo.png" alt="" />
               </div>
               <span className="text-2xl font-bold">
-                Amar<span className="text-blue-400">Moblie</span>
+                Amar<span className="text-primary">Moblie</span>
               </span>
             </div>
             <p className="text-gray-400 mb-4">
@@ -78,15 +81,15 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-gray-800 pt-8 text-gray-400">
+        <div className="border-t border-gray-500 pt-8 text-gray-400">
 </div>
 
       </div>
   <div className="w-[90vw]   mx-auto flex flex-col sm:flex-row items-center justify-between text-center sm:text-left gap-2">
     <p className="text-sm">&copy; 2025 Amar Mobile. All rights reserved.</p>
-    <p className="text-sm">
+    <p className="sm:text-sm text-xs">
       Developed by{" "}
-      <span className="text-white font-medium hover:text-blue-400 transition-colors">
+      <span className="text-white font-medium  hover:text-blue-400 transition-colors">
         Debjit Adhikari :)
       </span>
     </p>

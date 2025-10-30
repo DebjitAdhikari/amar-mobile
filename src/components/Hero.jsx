@@ -1,7 +1,7 @@
 import { Wrench, ShoppingBag, ChevronLeft, ChevronRight } from 'lucide-react';
 import { useState, useEffect } from 'react';
-
-const Hero = () => {
+import Aurora from './Aurora';
+const Hero = ({lang}) => {
   const [currentSlide, setCurrentSlide] = useState(0);
   
   // Sample images for the slider - replace with your actual images
@@ -41,7 +41,16 @@ const Hero = () => {
 
   return (
     <section id="home" className="relative bg-dark">
+      
+  
+{/* <Aurora
+  colorStops={["#3A29FF", "#FF94B4", "#FF3232"]}
+  blend={0.5}
+  amplitude={1.0}
+  speed={0.5}
+/> */}
       <div className="relative pt-24 pb-16 md:pt-20 md:pb-24 overflow-hidden bg-dark">
+        
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-16">
           <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
             
@@ -111,10 +120,17 @@ const Hero = () => {
             <div className="space-y-6 sm:text-center md:text-left order-2 md:order-1 animate-slideUp">
               <div className="space-y-4">
                 <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-[#f5c96a] leading-tight tracking-tight">
-                  Amar Mobile
+                  
+                  {
+                    lang=="bn"?"আমার মোবাইল":"Amar Mobile"
+                  }
                 </h1>
-                <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold text-slate-200 leading-tight">
-                  Your Trusted Mobile Repair & Accessories Store
+                <h2 className={`text-xl md:text-2xl lg:text-3xl  text-slate-200 leading-tight ${lang=="bn"?"font-light":"font-semibold"}`}>
+                  
+                  {
+                    lang=="bn"?"আপনাদের বিশ্বস্ত মোবাইল রিপেয়ারিং এবং অ্যাক্সেসরিজ স্টোর":"Your Trusted Mobile Repair & Accessories Store"
+                  }
+                  
                 </h2>
               </div>
               

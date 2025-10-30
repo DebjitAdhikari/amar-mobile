@@ -12,33 +12,81 @@ const Testimonials = () => {
       rating: 5,
       comment:
         "Really impressed! My phone screen was replaced quickly and the quality is perfect. Worth the visit.",
-      image: "./images/deb.png",
+      image: "./images/customers/deb.png",
     },
     {
-      name: "Donald Trumph",
-      rating: 5,
-      comment:
-        "Very professional team. They recovered all my data from a water-damaged phone. Highly recommend SmartFix!",
-      image: "/images/donald.jpg",
-    },
-    {
-      name: "Christian Bale",
+      name: "Biplab Ghosh",
       rating: 5,
       comment:
         "Best place for mobile accessories. Bought a power bank and tempered glass, both are excellent quality.",
-      image: "/images/chris-bale.jpg",
+      image: "/images/customers/biplab-profile.jpg",
     },
     {
-      name: "Daniel Radcliffe",
+      name: "Ashwini Mishra",
+      rating: 5,
+      comment:
+        "Very professional team. They recovered all my data from a water-damaged phone. Highly recommend!",
+      image: "/images/customers/soma-profile.jpg",
+    },
+    {
+      name: "Sumit Ganguly",
+      rating: 5,
+      comment:
+        "Very professional team. They recovered all my data from a water-damaged phone. Highly recommend!",
+      image: "/images/customers/sumit-profile.jpg",
+    },
+    {
+      name: "Priyanka Ghosh",
       rating: 5,
       comment:
         "Fast and reliable service. Battery replacement was done quickly and my phone works like new. Great experience!",
-      image: "/images/daniel.jpg",
+      image: "/images/customers/priyanka.jpg",
+    },
+    {
+      name: "Mousumi Pal",
+      rating: 5,
+      comment:
+        "Fast and reliable service. Battery replacement was done quickly and my phone works like new. Great experience!",
+      image: "/images/customers/mousumi.png",
+    },
+    {
+      name: "Abhijit Mondal",
+      rating: 5,
+      comment:
+        "Fast and reliable service. Battery replacement was done quickly and my phone works like new. Great experience!",
+      image: "/images/customers/abhijit.jpg",
+    },
+    {
+      name: "Parvez Alam",
+      rating: 5,
+      comment:
+        "Fast and reliable service. Battery replacement was done quickly and my phone works like new. Great experience!",
+      image: "/images/customers/parvez.jpg",
+    },
+    {
+      name: "Suman Ghosal",
+      rating: 5,
+      comment:
+        "Fast and reliable service. Battery replacement was done quickly and my phone works like new. Great experience!",
+      image: "/images/customers/suman.jpg",
+    },
+    {
+      name: "Sundaram Pal",
+      rating: 5,
+      comment:
+        "Fast and reliable service. Battery replacement was done quickly and my phone works like new. Great experience!",
+      image: "/images/customers/mona-profile.jpg",
     },
   ];
 
   return (
     <section className="py-16 md:py-24 bg-dark relative">
+      <div className=" opacity-20 absolute animate-zoom sm:w-60 w-48 right-2 sm:top-4 sm:left-4">
+        <img src="./images/person-using-laptop.png" alt="" />
+      </div>
+      <div className="opacity-20 absolute animate-zoom sm:w-60 w-32 bottom-1 right-1">
+        <img src="./images/chat-bg.png" alt="" />
+      </div>
       <div className="max-w-7xl mx-auto px-4  sm:px-6 lg:px-8">
         {/* Section Heading */}
         <div className="text-start sm:text-center mb-12 animate-fadeIn">

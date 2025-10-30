@@ -22,13 +22,13 @@ export default function Contact () {
 };
 
   return (
-    <section id="contact" className="py-16 md:py-24 bg-white">
+    <section id="contact" className="py-16 md:py-24 bg-dark">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12 animate-fadeIn">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-200 mb-4">
             Get in Touch
           </h2>
-          <p className="text-lg text-gray-600">
+          <p className="text-lg text-white">
             Have a question or need a repair? Contact us today!
           </p>
         </div>
@@ -36,13 +36,13 @@ export default function Contact () {
         <div className="grid lg:grid-cols-2 gap-12">
           <div className="flex flex-col justify-start  gap-6">
   {/* Address */}
-  <div className="flex items-start max-h-[120px] gap-4 bg-gray-50 rounded-xl sm:p-6 flex-1 sm:min-w-[280px] lg:max-w-sm hover:shadow-lg transition-all duration-300">
-    <div className="bg-blue-100 text-blue-600 p-3 rounded-lg flex-shrink-0">
+  <div className="flex items-start max-h-[180px] gap-4 bg-midDark rounded-xl sm:p-6 flex-1 sm:min-w-[280px] lg:max-w-sm hover:shadow-lg transition-all duration-300">
+    <div className="bg-transparent text-primary border-2 border-primary p-3 rounded-lg flex-shrink-0">
       <MapPin className="w-6 h-6" />
     </div>
     <div>
-      <h3 className="font-semibold text-gray-900 mb-1">Address</h3>
-      <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
+      <h3 className="font-semibold text-yellow-400 mb-1">Address</h3>
+      <p className="text-white text-sm sm:text-base leading-relaxed">
         Satgachia, Super Market, Durga Mandir<br />
         Purba Bardhaman, West Bengal 713422
       </p>
@@ -50,44 +50,44 @@ export default function Contact () {
   </div>
 
   {/* Phone */}
-  <div className="flex items-start max-h-[120px] gap-4 bg-gray-50 rounded-xl sm:p-6 flex-1 sm:min-w-[280px] lg:max-w-sm hover:shadow-lg transition-all duration-300">
-    <div className="bg-blue-100 text-blue-600 p-3 rounded-lg flex-shrink-0">
+  <div className="flex items-start max-h-[120px] gap-4 bg-midDark rounded-xl sm:p-6 flex-1 sm:min-w-[280px] lg:max-w-sm hover:shadow-lg transition-all duration-300">
+    <div className="bg-transparent text-primary border-2 border-primary p-3 rounded-lg flex-shrink-0">
       <Phone className="w-6 h-6" />
     </div>
     <div>
-      <h3 className="font-semibold  text-gray-900 mb-1">Phone</h3>
-      <p className="text-gray-600 text-sm sm:text-base">+91 7003454240/ +91 9832122122</p>
+      <h3 className="font-semibold  text-yellow-400 mb-1">Phone</h3>
+      <p className="text-white text-sm sm:text-base">+91 7003454240/ +91 9832122122</p>
     </div>
   </div>
 
   {/* Email */}
-  <div className="flex items-start gap-4 max-h-[120px] bg-gray-50 rounded-xl sm:p-6 flex-1 sm:min-w-[280px] lg:max-w-sm hover:shadow-lg transition-all duration-300">
-    <div className="bg-blue-100 text-blue-600 p-3 rounded-lg flex-shrink-0">
+  <div className="flex items-start gap-4 max-h-[120px] bg-midDark rounded-xl sm:p-6 flex-1 sm:min-w-[280px] lg:max-w-sm hover:shadow-lg transition-all duration-300">
+    <div className="bg-transparent text-primary border-2 border-primary p-3 rounded-lg flex-shrink-0">
       <Mail className="w-6 h-6" />
     </div>
     <div>
-      <h3 className="font-semibold text-gray-900 mb-1">Email</h3>
-      <p className="text-gray-600 text-sm sm:text-base break-words">
+      <h3 className="font-semibold text-yellow-400 mb-1">Email</h3>
+      <p className="text-white text-sm sm:text-base break-words">
         amarmobile@gmail.com
       </p>
     </div>
   </div>
 
   {/* Opening Hours */}
-  <div className="flex items-start gap-4 max-h-[120px] bg-gray-50 rounded-xl sm:p-6 flex-1 sm:min-w-[280px] lg:max-w-sm hover:shadow-lg transition-all duration-300">
-    <div className="bg-blue-100 text-blue-600 p-3 rounded-lg flex-shrink-0">
+  <div className="flex items-start gap-4 max-h-[120px] bg-midDark rounded-xl sm:p-6 flex-1 sm:min-w-[280px] lg:max-w-sm hover:shadow-lg transition-all duration-300">
+    <div className="bg-transparent text-primary border-2 border-primary p-3 rounded-lg flex-shrink-0">
       <Clock className="w-6 h-6" />
     </div>
     <div>
-      <h3 className="font-semibold text-gray-900 mb-1">Opening Hours</h3>
-      <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
+      <h3 className="font-semibold text-yellow-400 mb-1">Opening Hours</h3>
+      <p className="text-white text-sm sm:text-base leading-relaxed">
         Everyday: 7:30 AM - 9:30 PM
       </p>
     </div>
   </div>
 
   {/* WhatsApp Button */}
-  <div className="w-52 sm:w-full flex justify-center mt-4">
+  {/* <div className="w-52 sm:w-full flex justify-center mt-4">
     <a
       href="https://wa.me/917003454240"
       target="_blank"
@@ -97,15 +97,16 @@ export default function Contact () {
       <MessageCircle className="w-5 h-5" />
       Chat on WhatsApp
     </a>
-  </div>
+  </div> */}
 </div>
 
 
 
-          <div className="bg-gray-50 rounded-xl p-8">
+          <div className="bg-white/10 backdrop-blur-md 
+             border border-white/20 rounded-xl sm:p-8 p-2">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-2">
+                <label htmlFor="name" className="block text-sm font-semibold text-white mb-2">
                   Name
                 </label>
                 <input
@@ -115,13 +116,13 @@ export default function Contact () {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-200"
+                  className="w-full px-4 py-3 border text-slate-200 bg-transparent border-primary rounded-lg focus:outline-none focus:ring-2 focus:ring-primary transition-all duration-200"
                   placeholder="Your Name"
                 />
               </div>
 
               <div>
-                <label htmlFor="phone" className="block text-sm font-semibold text-gray-700 mb-2">
+                <label htmlFor="phone" className="block text-sm font-semibold text-white mb-2">
                   Phone Number
                 </label>
                 <input
@@ -131,13 +132,13 @@ export default function Contact () {
                   value={formData.phone}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-200"
+                  className="w-full px-4 py-3 border text-slate-200 bg-transparent border-primary rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-200"
                   placeholder="Your Phone Number"
                 />
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-sm font-semibold text-gray-700 mb-2">
+                <label htmlFor="message" className="block text-sm font-semibold text-white mb-2">
                   Message
                 </label>
                 <textarea
@@ -147,14 +148,14 @@ export default function Contact () {
                   onChange={handleChange}
                   required
                   rows={4}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-200 resize-none"
+                  className="w-full px-4 py-3 border text-slate-200 bg-transparent border-primary rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-200 resize-none"
                   placeholder="Tell us about your repair needs or questions..."
                 />
               </div>
 
               <button
                 type="submit"
-                className="w-full bg-blue-600 text-white px-6 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+                className="w-full bg-green-600  text-white px-6 py-4 rounded-lg font-semibold  transition-all duration-300 transform hover:scale-90 shadow-lg hover:shadow-xl"
               >
                 Send Message
               </button>

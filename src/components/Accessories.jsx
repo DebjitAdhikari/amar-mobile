@@ -58,7 +58,7 @@ const Accessories = () => {
       <div className='absolute w-24 h-24 sm:w-72 sm:h-72 opacity-45 right-2 sm:left-8 animate-float'>
         <img src="./images/headphone-bg.png" alt="" />
       </div>
-      <div className='hidden sm:absolute  w-24 h-24 sm:w-72 sm:h-72 opacity-45 top-2 right-6 animate-zoom'>
+      <div className='hidden sm:block sm:absolute  w-24 h-24 sm:w-72 sm:h-72 opacity-45 top-2 right-6 animate-zoom'>
         <img src="./images/neckband-bg.png" alt="" />
       </div>
       <div className='absolute w-32 h-32 opacity-45 bottom-20 left-6 animate-zoom'>

@@ -27,13 +27,19 @@ const Gallery = () => {
   ];
 
   return (
-    <section className="py-16 md:py-24 bg-white">
+    <section className="relative py-16 md:py-24 bg-dark">
+        {/* <div className="opacity-50 absolute animate-zoom sm:w-60 w-32 bottom-1 right-1">
+        <img src="./images/mobile-fix.png" alt="" />
+      </div> */}
+      {/* <div className="w-40 right-3 absolute opacity-20 bottom-5">
+        <img src="./images/mobile-fix.png" alt="" />
+      </div> */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12 animate-fadeIn">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Our Work & Store
+        <div className="text-start sm:text-center mb-12 animate-fadeIn">
+          <h2 className="text-2xl pl-2 sm:pl-0 border-l-4 border-primary sm:border-none md:text-4xl font-bold text-white mb-4">
+           Our Work & Store
           </h2>
-          <p className="text-lg text-gray-600">
+          <p className="text-lg text-slate-200">
             Take a look at our professional workspace and repair services
           </p>
         </div>
@@ -42,7 +48,7 @@ const Gallery = () => {
           {images.map((image, index) => (
             <div
               key={index}
-              className="group relative overflow-hidden rounded-xl shadow-md hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
+              className="group border-2 cursor-pointer border-primary/20 relative overflow-hidden rounded-xl shadow-md hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
             >
               <img
                 src={image.url}
