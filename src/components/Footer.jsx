@@ -63,7 +63,7 @@ const Footer = ({lang}) => {
           <div>
   <h3
     className={`text-lg ${
-      lang === "bn" ? "font-bengali leading-wide" : "font-semibold"
+      lang === "bn" ? "font-bengali " : "font-semibold"
     } mb-4`}
   >
     {lang === "bn" ? "দ্রুত লিংকসমূহ" : "Quick Links"}
@@ -74,7 +74,7 @@ const Footer = ({lang}) => {
         <button
           onClick={() => scrollToSection(link.href)}
           className={`text-gray-400 hover:text-white transition-colors duration-200 ${
-            lang === "bn" ? "font-bengali leading-wide" : ""
+            lang === "bn" ? "font-bengali " : ""
           }`}
         >
           {link.name}
@@ -87,14 +87,14 @@ const Footer = ({lang}) => {
           <div>
             <h3
   className={`text-lg ${
-    lang === "bn" ? "font-bengali leading-wide" : "font-semibold"
+    lang === "bn" ? "font-bengali " : "font-semibold"
   } mb-4`}
 >
   {lang === "bn" ? "যোগাযোগের তথ্য" : "Contact Info"}
 </h3>
 <ul
   className={`space-y-2 text-gray-400 ${
-    lang === "bn" ? "font-bengali leading-wide" : ""
+    lang === "bn" ? "font-bengali " : ""
   }`}
 > <li>{
           lang==="bn"?(

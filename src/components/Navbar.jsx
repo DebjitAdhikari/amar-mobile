@@ -57,7 +57,7 @@ const Navbar = ({lang}) => {
       key={link.name}
       onClick={() => scrollToSection(link.href)}
       className={`relative text-white ${
-        lang === "bn" ? "font-bengali leading-wide" : "font-medium"
+        lang === "bn" ? "font-bengali " : "font-medium"
       } transition-colors duration-300 hover:text-primary after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-gradient-to-r from-yellow-500 to-yellow-700 hover:after:w-full after:transition-all after:duration-300`}
     >
       {link.name}
@@ -86,7 +86,7 @@ const Navbar = ({lang}) => {
         key={link.name}
         onClick={() => scrollToSection(link.href)}
         className={`text-white text-left ${
-          lang === 'bn' ? 'font-bengali leading-wide' : 'font-medium'
+          lang === 'bn' ? 'font-bengali ' : 'font-medium'
         } py-2 hover:text-primary transition-all duration-300 border-b border-gray-100 last:border-none`}
       >
         {link.name}
