@@ -119,13 +119,13 @@ const Hero = ({lang}) => {
             {/* TEXT CONTENT SECTION */}
             <div className="space-y-6 sm:text-center md:text-left order-2 md:order-1 animate-slideUp">
               <div className="space-y-4">
-                <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-[#f5c96a] leading-tight tracking-tight">
+                <h1 className={`text-3xl md:text-5xl lg:text-6xl ${lang=="bn"?"font-bengali font-bold tracking-wide":"font-bold"} text-[#f5c96a] leading-tight tracking-tight`}>
                   
                   {
                     lang=="bn"?"আমার মোবাইল":"Amar Mobile"
                   }
                 </h1>
-                <h2 className={`text-xl md:text-2xl lg:text-3xl  text-slate-200 leading-tight ${lang=="bn"?"font-light":"font-semibold"}`}>
+                <h2 className={`text-xl md:text-2xl lg:text-3xl  text-slate-200 leading-tight ${lang=="bn"?"font-bengali tracking-wide ":"font-semibold"}`}>
                   
                   {
                     lang=="bn"?"আপনাদের বিশ্বস্ত মোবাইল রিপেয়ারিং এবং অ্যাক্সেসরিজ স্টোর":"Your Trusted Mobile Repair & Accessories Store"
@@ -134,27 +134,30 @@ const Hero = ({lang}) => {
                 </h2>
               </div>
               
-              <p className="text-lg md:text-xl text-gray-300 max-w-xl mx-auto md:mx-0 leading-relaxed">
-                Fast, reliable, and affordable mobile repair solutions. Plus, explore our wide range of genuine mobile accessories for every model.
+              <p className={`text-lg md:text-xl text-gray-300 max-w-xl mx-auto md:mx-0 leading ${lang==="bn"?"font-bengali tracking-wide":"font-semibold"}`}>
+                {
+                    lang=="bn"?"দ্রুত, নির্ভরযোগ্য এবং সাশ্রয়ী মোবাইল মেরামতের সমাধান। এছাড়াও, প্রতিটি মডেলের জন্য আমাদের মোবাইল অ্যাক্সেসরিজের বিশাল সম্ভার দেখুন।":"Fast, reliable, and affordable mobile repair solutions. Plus, explore our wide range of genuine mobile accessories for every model."
+                  }
+                
               </p>
 
               {/* Features List */}
-              <div className="grid grid-cols-2 gap-2 sm:gap-4 md:py-4 max-w-md mx-auto md:mx-0">
+              <div className={`grid grid-cols-2 gap-2 sm:gap-4 md:py-4 ${lang==="bn"?"font-bengali tracking-wide":""} max-w-md mx-auto md:mx-0`}>
                 <div className="flex items-center gap-2 text-white">
                   <div className="w-2 h-2 bg-[#f5c96a] rounded-full"></div>
-                  <span className="text-sm md:text-base">Quick Repair</span>
+                  <span className="text-sm md:text-base">{lang=="bn"?"দ্রুত সমাধান":"Quick Repair"}</span>
                 </div>
                 <div className="flex items-center gap-2 text-white">
                   <div className="w-2 h-2 bg-[#f5c96a] rounded-full"></div>
-                  <span className="text-sm md:text-base">Genuine Parts</span>
+                  <span className="text-sm md:text-base">{lang=="bn"?"ওয়ারেন্টি অন্তর্ভুক্ত":"Warranty Included"} </span>
                 </div>
                 <div className="flex items-center gap-2 text-white">
                   <div className="w-2 h-2 bg-[#f5c96a] rounded-full"></div>
-                  <span className="text-sm md:text-base">Warranty Included</span>
+                  <span className="text-sm md:text-base">{lang=="bn"?"আসল পার্টস":"Genuine Parts"}</span>
                 </div>
                 <div className="flex items-center gap-2 text-white">
                   <div className="w-2 h-2 bg-[#f5c96a] rounded-full"></div>
-                  <span className="text-sm md:text-base">Expert Technicians</span>
+                  <span className="text-sm md:text-base">{lang=="bn"?"বিশেষজ্ঞ টেকনিশিয়ান":"Expert Technicians"}</span>
                 </div>
               </div>
 
@@ -162,18 +165,22 @@ const Hero = ({lang}) => {
               <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4 pt-4">
                 <button
                   onClick={() => scrollToSection('#contact')}
-                  className="group bg-[#f5c96a] text-black px-6 py-3 md:px-8 md:py-4 rounded-lg font-semibold hover:bg-[#f5c96a]/90 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center gap-2 w-full sm:w-auto"
+                  className={`group bg-[#f5c96a] text-black px-6 py-3 md:px-8 md:py-4 rounded-lg ${lang==="bn"?"font-bengali ":"font-semibold"} hover:bg-[#f5c96a]/90 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center gap-2 w-full sm:w-auto`}
                 >
                   <Wrench className="w-5 h-5" />
-                  Book a Repair
+                  {lang=="bn"?"রিপেয়ার বুক করুন":"Book a Repair"}
+                  
                 </button>
                 <button
-                  onClick={() => scrollToSection('#accessories')}
-                  className="group bg-transparent text-white border-2 border-[#f5c96a] px-6 py-3 md:px-8 md:py-4 rounded-lg font-semibold hover:bg-[#f5c96a] hover:text-black transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center gap-2 w-full sm:w-auto"
-                >
-                  <ShoppingBag className="w-5 h-5" />
-                  Shop Accessories
-                </button>
+  onClick={() => scrollToSection('#accessories')}
+  className={`group bg-transparent text-white border-2 border-[#f5c96a] px-6 py-3 md:px-8 md:py-4 rounded-lg ${
+    lang === "bn" ? "font-bengali " : "font-semibold"
+  } hover:bg-[#f5c96a] hover:text-black transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center gap-2 w-full sm:w-auto`}
+>
+  <ShoppingBag className="w-5 h-5" />
+  {lang === "bn" ? "অ্যাক্সেসরিজ কিনুন" : "Shop Accessories"}
+</button>
+
               </div>
             </div>
           </div>

@@ -1,54 +1,54 @@
 import { Zap, Headphones, Ear, ShieldCheck, Shield, Battery, Cable } from 'lucide-react';
 
-const Accessories = () => {
+const Accessories = ({lang}) => {
   const products = [
     {
       icon: <Zap className="w-12 h-12" />,
-      name: 'Fast Chargers',
+      name: lang=="bn"?"ফাস্ট চার্জার": 'Fast Chargers',
       imagesrc:"./images/fast-chargers.png",
-      description: 'Quick charge compatible chargers for all devices',
+      description: lang=="bn"?"সব ধরনের ডিভাইসের জন্য কুইক চার্জ সাপোর্টেড চার্জার।": 'Quick charge compatible chargers for all devices',
       price: '₹49',
     },
     {
       icon: <Headphones className="w-12 h-12" />,
-      name: 'Bluetooth Headphones',
+      name: lang=="bn"?"ব্লুটুথ হেডফোন": 'Bluetooth Headphones',
       imagesrc:"./images/bluetooth-audio-devices.png",
-      description: 'Premium wireless headphones with noise cancellation',
+      description: lang=="bn"?"নয়েজ ক্যানসেলেশনসহ প্রিমিয়াম কোয়ালিটির ওয়্যারলেস হেডফোন।": 'Premium wireless headphones with noise cancellation',
       price: '₹799',
     },
     {
       icon: <Ear className="w-12 h-12" />,
-      name: 'Earphones',
+      name: lang=="bn"?"ইয়ারফোন": 'Earphones',
       imagesrc:"./images/wired-earphones.png",
-      description: 'High-quality wired earphones with deep bass',
+      description: lang=="bn"?"গভীর বেস সহ উচ্চমানের ওয়্যার্ড ইয়ারফোন।": 'High-quality wired earphones with deep bass',
       price: '₹50',
     },
     {
       icon: <ShieldCheck className="w-12 h-12" />,
-      name: 'Mobile Covers',
+      name: lang=="bn"?"মোবাইল কভার": 'Mobile Covers',
       imagesrc:"./images/mobile-covers.png",
-      description: 'Durable protective cases for all models',
+      description: lang=="bn"?"সব মডেলের জন্য টেকসই ও স্টাইলিশ প্রোটেকটিভ কভার।": 'Durable protective cases for all models',
       price: '₹80',
     },
     {
       icon: <Shield className="w-12 h-12" />,
-      name: 'Tempered Glass',
+      name: lang=="bn"?"টেম্পারড গ্লাস": 'Tempered Glass',
       imagesrc:"./images/mobile-glass.png",
-      description: '9H hardness screen protectors',
+      description: lang=="bn"?"স্ক্রিন সুরক্ষার জন্য 9H হার্ডনেস টেম্পারড গ্লাস।": '9H hardness screen protectors',
       price: '₹100',
     },
     {
       icon: <Battery className="w-12 h-12" />,
-      name: 'Power Banks',
+      name: lang=="bn"?"পাওয়ার ব্যাংক": 'Power Banks',
       imagesrc:"./images/power-bank.png",
-      description: '10000mAh portable charging solutions',
+      description: lang=="bn"?"১০,০০০mAh ক্ষমতার পোর্টেবল চার্জিং সমাধান।": '10000mAh portable charging solutions',
       price: '₹250',
     },
     {
       icon: <Cable className="w-12 h-12" />,
-      name: 'Data Cables',
+      name: lang=="bn"?"ডেটা কেবল": 'Data Cables',
       imagesrc:"./images/data-cables.png",
-      description: 'Fast charging & data sync cables',
+      description: lang=="bn"?"দ্রুত চার্জিং ও ডেটা সিঙ্ক সাপোর্টেড কেবল।": 'Fast charging & data sync cables',
       price: '₹120',
     },
   ];
@@ -69,12 +69,26 @@ const Accessories = () => {
       </div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-start sm:text-center mb-12 animate-fadeIn">
-          <h2 className="text-2xl pl-2 sm:pl-0 border-l-4 border-primary sm:border-none md:text-4xl font-bold text-white mb-4">
-            Shop Mobile Accessories
-          </h2>
-          <p className="sm:text-lg text-white max-w-2xl mx-auto">
-            Premium quality accessories at competitive prices. All products come with warranty.
-          </p>
+          <h2
+  className={`text-2xl pl-2 sm:pl-0 border-l-4 border-primary sm:border-none md:text-4xl ${
+    lang === "bn" ? "font-bengali leading-wide" : "font-bold"
+  } text-white mb-4`}
+>
+  {
+    lang==="bn"?"মোবাইল অ্যাক্সেসরিজ শপ":"Shop Mobile Accessories"
+  }
+  
+</h2>
+<p
+  className={`sm:text-lg text-white max-w-2xl mx-auto ${
+    lang === "bn" ? "font-bengali leading-wide" : ""
+  }`}
+>
+  {
+    lang === "bn" ? "প্রিমিয়াম মানের মোবাইল অ্যাক্সেসরিজ এখন সাশ্রয়ী দামে।প্রতিটি পণ্যের সঙ্গে থাকছে নির্ভরযোগ্য ওয়ারেন্টি।" : "Premium quality accessories at competitive prices. All products come with warranty."
+  }
+  
+</p>
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
@@ -101,15 +115,29 @@ const Accessories = () => {
 
       {/* Details Section */}
       <div className="p-6">
-        <h3 className="text-xl font-semibold text-slate-50 mb-2">
-          {product.name}
-        </h3>
-        <p className="text-white mb-4">
-          {product.description}
-        </p>
+        <h3
+  className={`text-xl ${
+    lang === "bn" ? "font-bengali " : "font-semibold"
+  } text-slate-50 mb-2`}
+>
+  {product.name}
+</h3>
+<p
+  className={`text-white mb-4 ${
+    lang === "bn" ? "font-bengali tracking-wide " : ""
+  }`}
+>
+  {product.description}
+</p>
         <div className="flex items-center justify-between">
-          <span className="text-white font-medium">Starting from</span>
-          <span className="bg-yellow-400 text-black px-3 py-1 rounded-lg font-semibold">
+          <span
+  className={`text-white ${
+    lang === "bn" ? "font-bengali " : "font-medium"
+  }`}
+>
+  {lang === "bn" ? "মূল্য শুরু" : "Starting from"}
+</span>
+<span className="bg-yellow-400 text-black px-3 py-1 rounded-lg font-semibold">
             {product.price}
           </span>
         </div>

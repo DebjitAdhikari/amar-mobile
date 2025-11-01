@@ -51,46 +51,49 @@ const Navbar = ({lang}) => {
 
           
           {/* Desktop Links */}
-          <div className="hidden md:flex items-center space-x-6">
-            {navLinks.map((link) => (
-              <button
-                key={link.name}
-                onClick={() => scrollToSection(link.href)}
-                className="relative text-white font-medium transition-colors duration-300 hover:text-primary after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-gradient-to-r from-yellow-500 to-yellow-700 hover:after:w-full after:transition-all after:duration-300"
-              >
-                {link.name}
-              </button>
-            ))}
-          </div>
+<div className="hidden md:flex items-center space-x-6">
+  {navLinks.map((link) => (
+    <button
+      key={link.name}
+      onClick={() => scrollToSection(link.href)}
+      className={`relative text-white ${
+        lang === "bn" ? "font-bengali leading-wide" : "font-medium"
+      } transition-colors duration-300 hover:text-primary after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-gradient-to-r from-yellow-500 to-yellow-700 hover:after:w-full after:transition-all after:duration-300`}
+    >
+      {link.name}
+    </button>
+  ))}
+</div>
 
-          {/* Mobile Menu Button */}
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden text-primary hover:text-primary  rounded-lg transition-colors"
-          >
-            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
+{/* Mobile Menu Button - No font weight class to modify, keeping as is */}
+<button
+  onClick={() => setIsOpen(!isOpen)}
+  className="md:hidden text-primary hover:text-primary rounded-lg transition-colors"
+>
+  {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+</button>
         </div>
 
         {/* Mobile Dropdown Menu */}
         <div
-          className={`md:hidden overflow-hidden py-2 transition-all duration-500 ease-in-out ${
-            isOpen ? 'max-h-80 opacity-100' : 'max-h-0 opacity-0'
-          }`}
-        >
-          <div className="flex flex-col  bg-white/10 backdrop-blur-md 
-             border border-white/20  rounded-xl shadow-md py-3 px-5 space-y-3 mt-2  border-gray-100">
-            {navLinks.map((link) => (
-              <button
-                key={link.name}
-                onClick={() => scrollToSection(link.href)}
-                className="text-white text-left font-medium py-2 hover:text-primary transition-all duration-300 border-b border-gray-100 last:border-none"
-              >
-                {link.name}
-              </button>
-            ))}
-          </div>
-        </div>
+  className={`md:hidden overflow-hidden py-2 transition-all duration-500 ease-in-out ${
+    isOpen ? 'max-h-80 opacity-100' : 'max-h-0 opacity-0'
+  }`}
+>
+  <div className="flex flex-col bg-white/10 backdrop-blur-md border border-white/20 rounded-xl shadow-md py-3 px-5 space-y-3 mt-2 border-gray-100">
+    {navLinks.map((link) => (
+      <button
+        key={link.name}
+        onClick={() => scrollToSection(link.href)}
+        className={`text-white text-left ${
+          lang === 'bn' ? 'font-bengali leading-wide' : 'font-medium'
+        } py-2 hover:text-primary transition-all duration-300 border-b border-gray-100 last:border-none`}
+      >
+        {link.name}
+      </button>
+    ))}
+  </div>
+</div>
       </div>
     </nav>
   );

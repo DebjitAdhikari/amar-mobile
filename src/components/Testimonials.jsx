@@ -5,76 +5,66 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-const Testimonials = () => {
+const Testimonials = ({lang}) => {
   const testimonials = [
     {
       name: "Debjit Adhikari",
       rating: 5,
-      comment:
-        "Really impressed! My phone screen was replaced quickly and the quality is perfect. Worth the visit.",
+      comment: lang=="bn"?"স্ক্রিনটা দারুণভাবে ফিট করেছে, দেখতে একদম নতুন ফোনের মতো লাগছে। কোয়ালিটিও একেবারে চমৎকার!":"Really impressed! My phone screen was replaced quickly and the quality is perfect. Worth the visit.",
       image: "./images/customers/deb.png",
     },
     {
       name: "Biplab Ghosh",
       rating: 5,
-      comment:
-        "Best place for mobile accessories. Bought a power bank and tempered glass, both are excellent quality.",
+      comment:lang=="bn"?"মোবাইল অ্যাক্সেসরিজের জন্য একদম বেস্ট জায়গা! পাওয়ার ব্যাংক আর টেম্পারড গ্লাস নিয়েছি — কোয়ালিটিটা দারুণ।":"Best place for mobile accessories. Bought a power bank and tempered glass, both are excellent quality.",
       image: "/images/customers/biplab-profile.jpg",
     },
     {
       name: "Ashwini Mishra",
       rating: 5,
-      comment:
-        "Very professional team. They recovered all my data from a water-damaged phone. Highly recommend!",
+      comment:lang=="bn"?"ওয়াটার ড্যামেজ ফোন থেকে ডেটা রিকভার করে ফেলেছে, ভাবতেই পারিনি! একদম প্রফেশনাল কাজ।":"Very professional team. They recovered all my data from a water-damaged phone. Highly recommend!",
       image: "/images/customers/soma-profile.jpg",
     },
     {
       name: "Sumit Ganguly",
       rating: 5,
-      comment:
-        "Very professional team. They recovered all my data from a water-damaged phone. Highly recommend!",
+      comment:lang=="bn"?"খুব ভালো অভিজ্ঞতা হয়েছে। ডেটা রিকভার আর মেরামত, দুইটাই দারুণ হয়েছে। ধন্যবাদ!":"Very professional team. They recovered all my data from a water-damaged phone. Highly recommend!",
       image: "/images/customers/sumit-profile.jpg",
     },
     {
       name: "Priyanka Ghosh",
       rating: 5,
-      comment:
-        "Fast and reliable service. Battery replacement was done quickly and my phone works like new. Great experience!",
+      comment:lang=="bn"?"দারুণ সার্ভিস! ব্যাটারি বদলটা একদম চটপট করে দিল, এখন ফোনটা একেবারে নতুনের মতো চলছে।":"Fast and reliable service. Battery replacement was done quickly and my phone works like new. Great experience!",
       image: "/images/customers/priyanka.jpg",
     },
     {
       name: "Mousumi Pal",
       rating: 5,
-      comment:
-        "Fast and reliable service. Battery replacement was done quickly and my phone works like new. Great experience!",
+      comment:lang=="bn"?"এক কথায় অসাধারণ! লোকজনগুলো ভীষণ ভালো, কাজও ঝটপট করে ফেলে। খুব খুশি হয়েছি।":"Fast and reliable service. Battery replacement was done quickly and my phone works like new. Great experience!",
       image: "/images/customers/mousumi.png",
     },
     {
       name: "Abhijit Mondal",
-      rating: 5,
-      comment:
-        "Fast and reliable service. Battery replacement was done quickly and my phone works like new. Great experience!",
+      rating: 3,
+      comment:lang=="bn"?"সার্ভিস ভালো, কিন্তু ভিড় একটু বেশি থাকে। বসার জায়গা না থাকায় অনেকক্ষণ দাঁড়িয়ে থাকতে হয়েছে। গ্রাহকদের জন্য একটু বসার ব্যবস্থা থাকলে দারুন হত।":"Fast and reliable service. Battery replacement was done quickly and my phone works like new. Great experience!",
       image: "/images/customers/abhijit.jpg",
     },
     {
       name: "Parvez Alam",
       rating: 5,
-      comment:
-        "Fast and reliable service. Battery replacement was done quickly and my phone works like new. Great experience!",
+      comment:lang=="bn"?"“সার্ভিসটা খুব ভালো, দামটাও একদম ঠিকঠাক। দোকানের সবাই ভদ্র আর খুব হেল্পফুল।":"Fast and reliable service. Battery replacement was done quickly and my phone works like new. Great experience!",
       image: "/images/customers/parvez.jpg",
     },
     {
       name: "Suman Ghosal",
       rating: 5,
-      comment:
-        "Fast and reliable service. Battery replacement was done quickly and my phone works like new. Great experience!",
+      comment:lang=="bn"?"একবার আসলে বারবার আসতে ইচ্ছে করবে, এমন ফ্রেন্ডলি বিহেভিয়ার!":"Fast and reliable service. Battery replacement was done quickly and my phone works like new. Great experience!",
       image: "/images/customers/suman.jpg",
     },
     {
       name: "Sundaram Pal",
       rating: 5,
-      comment:
-        "Fast and reliable service. Battery replacement was done quickly and my phone works like new. Great experience!",
+      comment:lang=="bn"?"ফোনটা একদম নতুনের মতো করে দিয়েছে! ভাবতেই পারিনি এত ভালো সার্ভিস পাব।":"Fast and reliable service. Battery replacement was done quickly and my phone works like new. Great experience!",
       image: "/images/customers/mona-profile.jpg",
     },
   ];
@@ -89,13 +79,24 @@ const Testimonials = () => {
       </div>
       <div className="max-w-7xl mx-auto px-4  sm:px-6 lg:px-8">
         {/* Section Heading */}
+
         <div className="text-start sm:text-center mb-12 animate-fadeIn">
-          <h2 className="text-2xl pl-2  border-l-4 sm:border-none border-primary  md:text-4xl font-bold text-slate-200 mb-4">
-            What Our Customer Says!
-          </h2>
-          <p className="text-lg text-white">
-            Don’t just take our word for it – hear from our satisfied customers
-          </p>
+          <h2
+  className={`text-2xl pl-2 border-l-4 sm:border-none border-primary md:text-4xl ${
+    lang === "bn" ? "font-bengali " : "font-bold"
+  } text-slate-200 mb-4`}
+>
+  {lang === "bn" ? "আমাদের গ্রাহকদের কথা" : "What Our Customer Says!"}
+</h2>
+<p
+  className={`text-lg text-white ${
+    lang === "bn" ? "font-bengali " : ""
+  }`}
+>
+  {lang === "bn"
+    ? "শুধু আমাদের মুখের কথা নয় — শুনে নিন, আমাদের গ্রাহকেরা কী বলছেন"
+    : "Don’t just take our word for it – hear from our satisfied customers"}
+</p>
         </div>
 
         {/* Swiper Container */}
@@ -158,9 +159,13 @@ const Testimonials = () => {
                         />
                       ))}
                     </div>
-                  <p className="text-white mb-4 italic text-center">
-                    "{testimonial.comment}"
-                  </p>
+                  <p
+  className={`text-white mb-4 italic text-center ${
+    lang === "bn" ? "font-bengali tracking-wide" : ""
+  }`}
+>
+  "{testimonial.comment}"
+</p>
                   </div>
 
                 </div>

@@ -1,6 +1,6 @@
 import { Facebook, Instagram, Twitter, Youtube, Smartphone } from 'lucide-react';
 
-const Footer = () => {
+const Footer = ({lang}) => {
   const scrollToSection = (sectionId) => {
     const element = document.querySelector(sectionId);
     if (element) {
@@ -9,10 +9,10 @@ const Footer = () => {
   };
 
   const quickLinks = [
-    { name: 'Home', href: '#home' },
-    { name: 'Services', href: '#services' },
-    { name: 'Accessories', href: '#accessories' },
-    { name: 'Contact', href: '#contact' },
+    { name: lang==="bn"?" হোম":'Home', href: '#home' },
+    { name: lang==="bn"?"সার্ভিসেস":'Services', href: '#services' },
+    { name: lang==="bn"?"অ্যাকসেসরিজ":'Accessories', href: '#accessories' },
+    { name: lang==="bn"?"যোগাযোগ":'Contact', href: '#contact' },
   ];
 
   const socialLinks = [
@@ -38,9 +38,15 @@ const Footer = () => {
                 Amar<span className="text-primary">Moblie</span>
               </span>
             </div>
-            <p className="text-gray-400 mb-4">
-              Your trusted destination for mobile repairs, genuine parts, and quality accessories.
-            </p>
+           <p
+  className={`text-gray-400 mb-4 ${
+    lang === "bn" ? "font-bengali leading-relaxed" : ""
+  }`}
+>
+  {lang === "bn"
+    ? "আপনার বিশ্বস্ত মোবাইল সার্ভিস সেন্টার — যেখানে পাবেন নির্ভরযোগ্য রিপেয়ার, অরিজিনাল পার্টস এবং মানসম্মত অ্যাকসেসরিজ"
+    : "Your trusted destination for mobile repairs, genuine parts, and quality accessories."}
+</p>
             {/* <div className="flex space-x-4">
               {socialLinks.map((social, index) => (
                 <a
@@ -55,27 +61,56 @@ const Footer = () => {
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
-            <ul className="space-y-2">
-              {quickLinks.map((link, index) => (
-                <li key={index}>
-                  <button
-                    onClick={() => scrollToSection(link.href)}
-                    className="text-gray-400 hover:text-white transition-colors duration-200"
-                  >
-                    {link.name}
-                  </button>
-                </li>
-              ))}
-            </ul>
-          </div>
+  <h3
+    className={`text-lg ${
+      lang === "bn" ? "font-bengali leading-wide" : "font-semibold"
+    } mb-4`}
+  >
+    {lang === "bn" ? "দ্রুত লিংকসমূহ" : "Quick Links"}
+  </h3>
+  <ul className="space-y-2">
+    {quickLinks.map((link, index) => (
+      <li key={index}>
+        <button
+          onClick={() => scrollToSection(link.href)}
+          className={`text-gray-400 hover:text-white transition-colors duration-200 ${
+            lang === "bn" ? "font-bengali leading-wide" : ""
+          }`}
+        >
+          {link.name}
+        </button>
+      </li>
+    ))}
+  </ul>
+</div>
 
           <div>
-            <h3 className="text-lg font-semibold mb-4">Contact Info</h3>
-            <ul className="space-y-2 text-gray-400">
-              <li>Satgachia, Super Market, Durga Mandir</li>
-              <li>Purba Bardhaman, West Bengal 713422</li>
-              <li>+91 70034 54240/+91 98321 22122</li>
+            <h3
+  className={`text-lg ${
+    lang === "bn" ? "font-bengali leading-wide" : "font-semibold"
+  } mb-4`}
+>
+  {lang === "bn" ? "যোগাযোগের তথ্য" : "Contact Info"}
+</h3>
+<ul
+  className={`space-y-2 text-gray-400 ${
+    lang === "bn" ? "font-bengali leading-wide" : ""
+  }`}
+> <li>{
+          lang==="bn"?(
+            <>
+            সাতগাছিয়া, সুপার মার্কেট, দুর্গা মন্দির <br/>
+            পূর্ব বর্ধমান, পশ্চিমবঙ্গ ৭১৩৪২২</>
+          ):(
+            <>
+            Satgachia, Super Market, Durga Mandir<br />
+        Purba Bardhaman, West Bengal 713422
+            </>
+          )
+        }</li>
+              <li>{
+          lang==="bn"?"+৯১ ৭০০৩৪৫৪২৪০/ +৯১ ৯৮৩২১২২১২২":"+91 7003454240/ +91 9832122122"
+        }</li>
               <li>amarmobile@gmail.com</li>
             </ul>
           </div>

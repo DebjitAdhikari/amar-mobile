@@ -19,10 +19,10 @@ import LanguagePopup from './components/LanguagePopUp';
  
 
 function App() {
-  const [lang,setLang]=useState("en")
-  // if(!lang){
-  //   return <LanguagePopup onSelect={setLang}></LanguagePopup>
-  // }
+  const [lang,setLang]=useState("")
+  if(!lang){
+    return <LanguagePopup onSelect={setLang}></LanguagePopup>
+  }
   return (
     <div className="min-h-screen z-50 overflow-hidden bg-dark">
       
@@ -30,7 +30,7 @@ function App() {
       <WhatsAppButton></WhatsAppButton>
       <Hero lang={lang}/>
       <Services lang={lang}/>
-      <Accessories />
+      <Accessories lang={lang}/>
       {/* <SpecialOffers /> */}
       <Brands lang={lang}/>
       <About lang={lang}/>

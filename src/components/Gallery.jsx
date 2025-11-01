@@ -1,4 +1,4 @@
-const Gallery = () => {
+const Gallery = ({lang}) => {
   const images = [
     {
       url: '/images/gallery-1.jpg',
@@ -36,12 +36,22 @@ const Gallery = () => {
       </div> */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-start sm:text-center mb-12 animate-fadeIn">
-          <h2 className="text-2xl pl-2 sm:pl-0 border-l-4 border-primary sm:border-none md:text-4xl font-bold text-white mb-4">
-           Our Work & Store
-          </h2>
-          <p className="text-lg text-slate-200">
-            Take a look at our professional workspace and repair services
-          </p>
+          <h2
+  className={`text-2xl pl-2 sm:pl-0 border-l-4 border-primary sm:border-none md:text-4xl ${
+    lang === "bn" ? "font-bengali " : "font-bold"
+  } text-white mb-4`}
+>
+  {lang === "bn" ? "আমাদের কাজ ও দোকান" : "Our Work & Store"}
+</h2>
+<p
+  className={`text-lg text-slate-200 ${
+    lang === "bn" ? "font-bengali leading-wide" : ""
+  }`}
+>
+  {lang === "bn"
+    ? "আমাদের পেশাদার ওয়ার্কস্পেস এবং সার্ভিসের এক ঝলক দেখে নিন।"
+    : "Take a look at our professional workspace and repair services"}
+</p>
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">

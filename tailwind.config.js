@@ -53,7 +53,9 @@ drift: {
         drift: 'drift 6s ease-in-out infinite',
         pulseGlow: 'pulseGlow 2s ease-in-out infinite',
       },
-    
+    fontFamily: {
+      bengali: ['"Tiro Bangla"', 'serif'],
+    },
     },
   },
   plugins: [],

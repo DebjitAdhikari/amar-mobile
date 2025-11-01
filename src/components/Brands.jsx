@@ -1,4 +1,4 @@
-const Brands = () => {
+const Brands = ({lang}) => {
   const brands = [
     { name: 'Apple', logo: '🍎',imageSrc:"./images/apple-logo.png" },
     { name: 'Samsung', logo: '📱',imageSrc:"./images/samsung-logo.avif" },
@@ -17,12 +17,22 @@ const Brands = () => {
       </div> */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-start sm:text-center mb-12 animate-fadeIn">
-          <h2 className="text-2xl pl-2 sm:pl-0 border-l-4 border-primary sm:border-none md:text-4xl font-bold text-white mb-4">
-            Brands We Repair & Support
-          </h2>
-          <p className="text-lg text-slate-200">
-            We service all major smartphone brands with expertise and care
-          </p>
+          <h2
+  className={`text-2xl pl-2 sm:pl-0 border-l-4 border-primary sm:border-none md:text-4xl ${
+    lang === "bn" ? "font-bengali " : "font-bold"
+  } text-white mb-4`}
+>
+  {lang === "bn" ? "আমরা যেসব ব্র্যান্ড সার্ভিস করি" : "Brands We Repair & Support"}
+</h2>
+<p
+  className={`text-lg text-slate-200 ${
+    lang === "bn" ? "font-bengali " : ""
+  }`}
+>
+  {lang === "bn"
+    ? "আমরা দক্ষতা ও যত্নের সঙ্গে সব জনপ্রিয় স্মার্টফোন ব্র্যান্ডের সার্ভিস প্রদান করি।"
+    : "We service all major smartphone brands with expertise and care"}
+</p>
         </div>
 
         <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-4">
