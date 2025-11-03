@@ -13,10 +13,10 @@ const Navbar = ({lang}) => {
 
   const navLinks = [
     { name: lang=="bn"?"হোম":'Home', href: '#home' },
-    { name: lang?"সার্ভিস":'Services', href: '#services' },
-    { name: lang?"অ্যাক্সেসরিজ":'Accessories', href: '#accessories' },
-    { name: lang?"সম্বন্ধে":'About', href: '#about' },
-    { name: lang?"যোগাযোগ":'Contact', href: '#contact' },
+    { name: lang=="bn"?"সার্ভিস":'Services', href: '#services' },
+    { name: lang=="bn"?"অ্যাক্সেসরিজ":'Accessories', href: '#accessories' },
+    { name: lang=="bn"?"সম্বন্ধে":'About', href: '#about' },
+    { name: lang=="bn"?"যোগাযোগ":'Contact', href: '#contact' },
   ];
 
   const scrollToSection = (href) => {

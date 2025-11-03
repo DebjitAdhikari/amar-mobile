@@ -6,10 +6,11 @@ const Hero = ({lang}) => {
   
   // Sample images for the slider - replace with your actual images
   const sliderImages = [
-    "./images/gallery-5.jpg",
+    "./images/main_image.jpg",
+    "./images/main_image4.png",
+    "./images/main_image5.png",
     "./images/gallery-2.jpg", 
-    "./images/gallery-3.jpg",
-    "./images/gallery-4.jpg"
+    
   ];
 
   const scrollToSection = (sectionId) => {

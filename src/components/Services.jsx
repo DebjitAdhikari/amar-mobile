@@ -40,10 +40,10 @@ const Services = ({lang}) => {
   return (
     <section id="services" className="relative py-16 md:py-24 bg-dark overflow-hidden">
       {/* Background images */}
-      <div className="absolute w-28 h-28 sm:w-72 sm:h-72 opacity-45 top-1 right-2 sm:bottom-9 sm:top-2 sm:left-4">
+      <div className="absolute w-28 h-28 sm:w-52 sm:h-52 opacity-20 top-1 right-2 sm:bottom-9 sm:top-2 sm:left-4">
         <img src="./images/screw-driver.png" alt="" />
       </div>
-      <div className="absolute w-24 h-24 sm:w-60 sm:h-60 opacity-60 bottom-2 sm:bottom-9 right-2 animate-spin">
+      <div className="absolute w-24 h-24 sm:w-48 sm:h-48 opacity-20 bottom-2 sm:bottom-9 right-2 animate-spin">
         <img src="./images/single-setting-bg.png" alt="" />
       </div>
 

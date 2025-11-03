@@ -13,7 +13,7 @@ const About = ({lang}) => {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="animate-fadeIn">
             <img
-              src="./images/shop-about-img.jpg"
+              src="./images/main_image2.jpg"
               alt="Amar Moblie"
               className="rounded-2xl max-h-[400px] sm:max-h-[600px]  m-auto shadow-2xl"
             />
@@ -41,7 +41,10 @@ const About = ({lang}) => {
 `
     : `We've been repairing smartphones and providing premium accessories since 2015.
 With over 5,000 devices repaired, we are your trusted local mobile care partner.
-`}
+
+Our team of certified technicians uses only genuine parts and adheres to the latest industry standards to ensure your device receives the highest quality service.
+
+We have complete confidence in our work, which is why we offer worry-free service backed by a warranty and excellent customer support.`}
 </p>
             
 

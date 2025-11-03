@@ -9,19 +9,19 @@ const Gallery = ({lang}) => {
     //   title: 'Professional Repair Work',
     },
     {
-      url: '/images/gallery-3.jpg',
+      url: '/images/main_image4.png',
     //   title: 'Professional Repair Work',
     },
     {
-      url: '/images/gallery-4.jpg',
+      url: '/images/main_image3.jpg',
     //   title: 'Professional Repair Work',
     },
     {
-      url: '/images/gallery-5.jpg',
+      url: '/images/main_image5.png',
     //   title: 'Professional Repair Work',
     },
     {
-      url: '/images/gallery-1.jpg',
+      url: '/images/main_image.jpg',
     //   title: 'Professional Repair Work',
     },
   ];

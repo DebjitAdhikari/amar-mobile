@@ -15,7 +15,7 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import { ChartBarIcon, MessageCircle } from 'lucide-react';
 import WhatsAppButton from './components/WhatsAppButton';
-import LanguagePopup from './components/LanguagePopUp';
+import LanguagePopup from './components/LanguagePopup';
  
 
 function App() {
