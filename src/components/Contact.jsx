@@ -205,7 +205,7 @@ export default function Contact ({lang}) {
                   value={formData.phone}
                   onChange={handleChange}
                   
-                  className="w-full px-4 py-3 border text-slate-200 bg-transparent border-primary rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-200"
+                  className="w-full px-4 py-3 border text-slate-200 bg-transparent border-primary rounded-lg focus:outline-none focus:ring-2 focus:ring-primary transition-all duration-200"
                   placeholder={lang==="bn"?"আপনার ফোন নম্বর":"Your Phone Number"}
                 />
               </div>
@@ -226,7 +226,7 @@ export default function Contact ({lang}) {
                   onChange={handleChange}
                   required
                   rows={4}
-                  className="w-full px-4 py-3 border text-slate-200 bg-transparent border-primary rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-200 resize-none"
+                  className="w-full px-4 py-3 border text-slate-200 bg-transparent border-primary rounded-lg focus:outline-none focus:ring-2 focus:ring-primary transition-all duration-200 resize-none"
                   placeholder={lang==="bn"?"আপনার রিপেয়ার সংক্রান্ত প্রয়োজন বা প্রশ্নটি লিখুন...":"Tell us about your repair needs or questions..."}
                 />
               </div>
