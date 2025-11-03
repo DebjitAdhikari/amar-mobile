@@ -10,8 +10,18 @@ export default function Contact ({lang}) {
 
   const handleSubmit = ((e) => {
     e.preventDefault();
-    alert('Thank you for contacting us! We will get back to you soon.');
+    // alert('Thank you for contacting us! We will get back to you soon.');
+    const myNumber=7003454240
+    const formattedMessage = encodeURIComponent(
+      `Hi, I'm contacting you from the Amar Mobile website.\n`
+      +`Name: ${formData.name}\n`
+      +`${formData.phone?`Contact No: ${formData.phone}\n`:""}`
+      +`Message: ${formData.message}`
+    )
+    const whatsappLink = `https://wa.me/${myNumber}?text=${formattedMessage}`
+    window.location.href=whatsappLink
     setFormData({ name: '', phone: '', message: '' });
+    
   })
 
   const handleChange = (e) => {
@@ -194,7 +204,7 @@ export default function Contact ({lang}) {
                   name="phone"
                   value={formData.phone}
                   onChange={handleChange}
-                  required
+                  
                   className="w-full px-4 py-3 border text-slate-200 bg-transparent border-primary rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-200"
                   placeholder={lang==="bn"?"আপনার ফোন নম্বর":"Your Phone Number"}
                 />
